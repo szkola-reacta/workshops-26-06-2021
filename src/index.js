@@ -9,7 +9,7 @@ import reportWebVitals from './reportWebVitals';
 // }
 
 ReactDOM.render(
-  <App />, // JS + HTML = JSX
+  <React.StrictMode><App /></React.StrictMode>, // JS + HTML = JSX
   document.getElementById('root')
 );
 
