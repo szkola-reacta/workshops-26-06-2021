@@ -4,10 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// function Counter() {
+//   return <button>Click me</button>
+// }
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <App />, // JS + HTML = JSX
   document.getElementById('root')
 );
 
