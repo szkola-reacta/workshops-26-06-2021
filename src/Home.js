@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+import { useState } from 'react';
 // import logo from './logo.svg';
 import './App.css';
 
@@ -17,12 +19,21 @@ function Offer({ name, description, country, cover }) {
         <img src={cover} alt="" />
       </div>
       <div className="offer__column">
-        <h2>{name}</h2>
+        <h2
+          onClick={() => console.log(name)}
+          style={{ cursor: 'pointer' }}
+        >
+          {name}
+        </h2>
         <p>{description}</p>
         <p>{country}</p>
       </div>
     </div>
   );
+}
+
+Offer.propTypes = {
+  name: PropTypes.string.isRequired,
 }
 
 Offer.defaultProps = {
@@ -41,8 +52,18 @@ Offer.defaultProps = {
 // }
 
 function Home() {
+
+  // const selectedOffer = 'Cozy flat';
+  const [selectedOffer, setSelectedOffer] = useState('Cozy flat');
+  // 0 - variable
+  // 1 - callback
+
   return (
     <div className="App">
+      <div>
+        <h1>Wybrano: {selectedOffer}</h1>
+      </div>
+
       <Offer
         name="Six Suites, Old Town"
         description="Spokojny nocleg"
