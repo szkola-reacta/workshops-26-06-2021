@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Home from './Home';
 import reportWebVitals from './reportWebVitals';
 
 // function Counter() {
@@ -9,7 +9,7 @@ import reportWebVitals from './reportWebVitals';
 // }
 
 ReactDOM.render(
-  <React.StrictMode><App /></React.StrictMode>, // JS + HTML = JSX
+  <React.StrictMode><Home /></React.StrictMode>, // JS + HTML = JSX
   document.getElementById('root')
 );
 
