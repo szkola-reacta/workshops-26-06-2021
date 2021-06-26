@@ -1,15 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import './index.css';
 import Home from './Home';
 import reportWebVitals from './reportWebVitals';
 
-// function Counter() {
-//   return <button>Click me</button>
-// }
-
 ReactDOM.render(
-  <React.StrictMode><Home /></React.StrictMode>, // JS + HTML = JSX
+  <React.StrictMode>
+    <Home />
+  </React.StrictMode>, // JS + HTML = JSX
   document.getElementById('root')
 );
 
