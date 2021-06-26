@@ -42,6 +42,7 @@ function Home() {
         <OfferListItem
           key={`offer-${elem.id}`}
           // offerObj={elem}
+          id={elem.id}
           name={elem.name}
           street={elem.street}
           city={elem.city}

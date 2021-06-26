@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const offerStyles = {
   main: {
@@ -11,12 +12,12 @@ const offerStyles = {
 };
 
 function OfferListItem({
+  id,
   name,
   street,
   city,
   country,
   cover,
-  handleClick,
 }) {
   return (
     <div className="offer" style={offerStyles.main}>
@@ -25,10 +26,11 @@ function OfferListItem({
       </div>
       <div className="offer__column">
         <h2
-          onClick={() => handleClick(name)}
           style={offerStyles.h2}
         >
-          {name}
+          <Link to={`/offer/${id}`}>
+            {name}
+          </Link>
         </h2>
         <p>{street}, {city}</p>
         <p>{country}</p>

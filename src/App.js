@@ -7,6 +7,7 @@ import {
 import NavMenu from './components/NavMenu';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
+import Offer from './pages/Offer';
 import Page404 from './pages/Page404';
 
 import './App.css';
@@ -20,6 +21,9 @@ function App() {
           <Switch>
             <Route path="/" exact>
               <Home />
+            </Route>
+            <Route path="/offer/:offerId">
+              <Offer />
             </Route>
             <Route path="/contact">
               <Contact />
