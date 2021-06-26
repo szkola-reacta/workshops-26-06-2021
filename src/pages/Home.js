@@ -1,11 +1,10 @@
 import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 
-import './App.css';
 // import { fetchPosts } from './services/posts';
 // import { fetchOffers } from './services/offers';
 
-import { fetchOffers, fetchPosts } from './services';
+import { fetchOffers, fetchPosts } from '../services';
 
 const listBackground = {
   backgroundColor: 'white',
