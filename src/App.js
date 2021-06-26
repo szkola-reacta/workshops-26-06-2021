@@ -4,8 +4,10 @@ import {
  Route
 } from 'react-router-dom';
 
+import NavMenu from './components/NavMenu';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
+import Page404 from './pages/Page404';
 
 import './App.css';
 
@@ -13,14 +15,17 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <nav></nav>
+        <NavMenu />
         <main>
           <Switch>
+            <Route path="/" exact>
+              <Home />
+            </Route>
             <Route path="/contact">
               <Contact />
             </Route>
-            <Route path="/">
-              <Home />
+            <Route path="*">
+              <Page404 />
             </Route>
           </Switch>
         </main>
