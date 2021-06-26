@@ -1,6 +1,9 @@
 import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
+
 import './App.css';
+import { fetchPosts } from './services/posts';
+import { fetchOffers } from './services/offers';
 
 const listBackground = {
   backgroundColor: 'white',
@@ -67,15 +70,19 @@ function Home() {
   }, []);
 
   useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/posts')
-    .then(response => response.json())
-    .then(data => setData(data))
+    setData(fetchPosts());
   }, []);
 
   useEffect(() => {
-    fetch('/data/offers.json')
-    .then(response => response.json())
-    .then(data => setOffers(data))
+    async function fetchData() {
+      try {
+        const data = await fetchOffers();
+        setOffers(data);
+      } catch (error) {
+        // UI - error notification
+      }
+    }
+    fetchData();
   }, []);
 
   return (
